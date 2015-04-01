@@ -1,0 +1,7 @@
+Run the following
+
+javac code/*.java
+jar -cf myjar.jar code udf
+jar -tf myjar.jar
+javac -cp .:myjar.jar TestIt.java
+java -classpath myjar.jar:. TestIt
