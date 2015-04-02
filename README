@@ -1,12 +1,15 @@
 Run the following
 
+cd src
 # compile the code for the jar
 javac code/*.java
 # create the jar using the code and udf directories
-jar -cf myjar.jar code udf
+jar -cf ../myjar.jar code udf
+
+cd ..
 # list the contents of the jar
 jar -tf myjar.jar
 # compile the test code that accesses code in the jar
 javac -cp .:myjar.jar TestIt.java
 # run the code
-java -classpath myjar.jar:. TestIt
+java -cp .:myjar.jar TestIt
